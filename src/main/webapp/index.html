@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <title>Ripetiamo | L'amore per la cultura al tuo servizio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/guestPage.css">
+    <link rel="stylesheet" href="./css/clientPage.css">
+    <link rel="stylesheet" href="./css/adminPage.css">
+    <link rel="icon" href="/icons/logol.png"  type="icon">
+</head>
+<body>
+    <div id="app">
+        <div class="mainApp" v-if="login === false">
+
+            <header class="header guest" v-if="this.Role==='ospite'">
+                <navbar-guest v-if="this.Role==='ospite'" v-on:switch-login="switchLoginView"></navbar-guest>
+                <hero-action v-if="this.Role === 'ospite'" v-on:switch-login="switchLoginView"></hero-action>
+            </header>
+            <header class="header" id="adminNavbar" v-if="this.Role === 'admin'">
+                <navbar-admin v-if="this.Role === 'admin'"  v-on:logout-inner="logoutMethod" :Username="Username"></navbar-admin>
+            </header>
+            <article v-if="this.Role === 'ospite'" class="guestPage">
+                <view-courses-section v-if="this.Role==='ospite'"></view-courses-section>
+                <view-teachers-section v-if="this.Role==='ospite'"></view-teachers-section>
+                <reviews-section v-if="this.Role==='ospite'"></reviews-section>
+                <view-available-lessons v-if="this.Role === 'ospite'"></view-available-lessons>
+                <join-us v-if="this.Role === 'ospite'"></join-us>
+            </article>
+            <article v-if="this.Role === 'cliente'" class="clientPage">
+                <side-bar v-if="this.Role === 'cliente'" v-on:switch-client-view="switchClientView"
+                          :Username="Username"></side-bar>
+                <div class="clientFunctions">
+                    <logout-client v-if="this.Role==='cliente' && this.clientView === 'logoutClient'"
+                            v-on:logout-inner="logoutMethod"></logout-client>
+                    <book-lesson v-if="this.Role==='cliente' && this.clientView === 'BaL'"></book-lesson>
+                    <view-booking-section v-if="this.Role === 'cliente' && this.clientView === 'myBookings'"></view-booking-section>
+                    <view-available-lessons v-if="this.Role === 'cliente' && this.clientView === 'ourLessons'"></view-available-lessons>
+                    <contact-us v-if="this.Role==='cliente' && this.clientView === 'contactUs'"
+                                    v-on:contact-inner="sendEmail"></contact-us>
+                </div>
+            </article>
+            <article v-if="this.Role === 'admin'" class="adminPage">
+                <div v-if="this.Role === 'admin'" class="adminFunctionsRow">
+                    <admin-view-bookings v-if="this.Role === 'admin'" class="adminFunctionsCol"></admin-view-bookings>
+                    <admin-section-course v-if="this.Role === 'admin'" class="adminFunctionsCol"></admin-section-course>
+                </div>
+                <div v-if="this.Role === 'admin'" class="adminFunctionsRow">
+                    <admin-section-teacher v-if="this.Role === 'admin'" class="adminFunctionsCol"></admin-section-teacher>
+                    <admin-section-teaching v-if="this.Role === 'admin'" class="adminFunctionsCol"></admin-section-teaching>
+                </div>
+            </article>
+            <footer-section v-if="this.Role === 'ospite'" Role="ospite"></footer-section>
+            <footer-section v-if="this.Role === 'cliente' && this.clientView!=='myBookings'" Role="client" class="footerSectionClient"></footer-section>
+        </div>
+        <div class="login" v-if="login === true">
+            <loginfield v-on:login-inner="loginMethod"></loginfield>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/home/home.js"></script>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

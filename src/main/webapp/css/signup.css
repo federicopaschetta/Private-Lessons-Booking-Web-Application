@@ -1,0 +1,116 @@
+:root {
+    --blue: #122b62;
+    --turquoise: #a7d5c5;
+    --white: #ffffff;
+    --darkblue: #060241
+}
+.signUpPage {
+    background: rgb(50,191,168);
+    background: linear-gradient(317deg, rgba(50,191,168,1) 0%, rgba(21,227,200,1) 32%, rgba(41,81,198,1) 70%, rgba(2,15,107,1) 100%);
+    height: 100vh;
+    margin:0;
+    padding: 0;
+    overflow:hidden;
+    box-sizing: border-box;
+}
+
+.signUpContainer {
+    width: 50vh;
+    height:80vh;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.signUpTitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 12vh;
+    padding: 30px 0 10px 0;
+}
+
+.signUpForm {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.signUpFields {
+    position: relative;
+    border-bottom: 2px solid var(--blue);
+    margin: 30px 0;
+}
+
+.signUpFields input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.signUpFields label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--blue);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.signUpFields span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--blue);
+    transition: .5s;
+}
+
+.signUpFields input:focus ~ label,
+.signUpFields input:valid ~ label{
+    top: -5px;
+    color: var(--turquoise);
+}
+
+.signUpFields input:focus ~ span::before,
+.signUpFields input:valid ~ span::before{
+    width: 100%;
+}
+
+
+.signUpButton {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.signUpButton:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.status {
+    display: flex;
+}
+
+.status img {
+    height: 5vh;
+}

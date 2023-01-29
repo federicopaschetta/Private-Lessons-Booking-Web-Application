@@ -1,0 +1,312 @@
+:root {
+    --blue: #122b62;
+    --turquoise: #a7d5c5;
+    --white: #ffffff;
+    --darkblue: #060241
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+h2 {
+    padding-bottom: 1%;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+span {
+    color: var(--turquoise);
+}
+
+.header{
+    background: linear-gradient(180deg, var(--darkblue) 0%, var(--blue) 100%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/*
+.header.guest{
+    min-height: 100vh;
+}
+
+ */
+
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 14vh 1vh 14vh;
+    background-color: var(--darkblue);
+    width: 100%;
+    z-index: 1;
+}
+
+nav img {
+    width: 9.5em;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    padding-right: 25vh;
+}
+
+.phone {
+    display: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 1vh 1.5vh;
+    position: relative;
+}
+
+.navBarLinks {
+    color:var(--white);
+    text-decoration: none;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+
+#navBarLinkId {
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.navBarLinks::after {
+    content: '';
+    width: 0%;
+    height: 0.175em;
+    margin: auto;
+    display: block;
+    background: var(--turquoise);
+    transition: 0.4s;
+}
+
+.navBarLinks:hover::after {
+    width: 100%;
+}
+
+.nav-links .fa {
+    display: none;
+}
+
+.viewBookings {
+    text-align: center;
+}
+
+tr:hover{
+    cursor: pointer;
+}
+td .hero-btn {
+    display: none;
+    border: none;
+}
+
+td .hero-btn:hover {
+    border:none;
+    background: transparent;
+}
+
+.semaphor {
+    height: 30px;
+    width: 30px;
+}
+
+.selected td button{
+    display: inline-block;
+    width: 10vh;
+}
+
+
+.selected .activeBooking {
+    display: flex;
+    align-items: center;
+}
+
+.selected .activeBooking img {
+    display: none;
+}
+
+.stateData {
+    width: 20%;
+}
+
+
+footer {
+    width: 160vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
+    padding: 3vh;
+}
+
+.footer-row a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-row ul {
+    display: flex;
+    width: 60%;
+}
+
+.footer-row ul li {
+    list-style: none;
+    padding: 4vh;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    padding: 0.5em;
+}
+
+hr {
+    width: 10em;
+    margin: auto;
+    color: var(--turquoise);
+}
+
+.hero-btn:hover {
+    border-color: var(--blue);
+    border: 2px solid;
+    transition: 1s;
+}
+
+#welcomeUser a {
+    cursor: pointer;
+}
+#welcomeUser img {
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+}
+
+.tableSection {
+    overflow-x: auto;
+    height: 50vh;
+    padding: 0% 10%;
+    margin: 7%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataTable {
+    border-collapse: collapse;
+    border: 1px solid var(--turquoise);
+    width: 90%;
+    position: center;
+}
+
+.dataTable tr {
+    background-color: var(--white);
+}
+
+.dataTable tr:nth-child(odd) {
+    background-color: #D8FCEDFF;
+}
+.dataTable tr th {
+    background-color: #72D2C3FF;
+    color: var(--white);
+    z-index: 1;
+    padding: 2% 4%;
+}
+
+.dataTable tr td{
+    color: var(--blue);
+    text-align: center;
+    vertical-align: center;
+    padding: 2% 4%;
+}
+
+.lessonTime {
+    width: 25%;
+}
+
+.containerAvailableLessons {
+    text-align: center;
+}
+
+.containerAvailableLessons h2 {
+    color: white;
+}
+
+#viewBookingsSection {
+    align-items: center;
+}
+
+
+/*VERSIONE MOBILE*/
+@media(max-width: 900px) {
+    body {
+        width: 100vh;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .header {
+        width: 100%;
+        height: 100%;
+    }
+
+    .campus-row {
+        display: none;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .textbox h1 {
+        font-size: 30px;
+    }
+
+    .textbox h2 {
+        display: none;
+    }
+
+    .cta {
+        width: 80%;
+    }
+
+    .reviews {
+        display: none;
+    }
+
+    .reviews-row {
+        display: block;
+    }
+}

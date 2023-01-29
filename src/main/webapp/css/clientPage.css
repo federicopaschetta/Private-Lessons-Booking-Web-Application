@@ -1,0 +1,209 @@
+.BaL {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: var(--white);
+}
+
+
+.dropDown {
+    background-color: var(--turquoise);
+    border-radius: 5px;
+    margin: 8vh;
+    padding-bottom: 3vh;
+}
+
+.choice {
+    padding: 3vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dropDown label {
+    text-align: left;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.dropDown label {
+    color: var(--blue);
+    font-weight: bold;
+    border-radius: 1.5em;
+    height: 100%;
+}
+
+.dropDown select {
+    border-radius: 0.2em;
+    border: none;
+}
+
+.dropDown .hero-btn {
+    background: rgb(14, 14, 81);
+    color: var(--white);
+    width: 20%;
+    border: none;
+}
+
+.dropDown .hero-btn:hover {
+    border-color: var(--blue);
+    background: var(--blue);
+    transition: 1s;
+}
+
+.scelta {
+    display: grid;
+}
+
+.clientSection {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    align-items: center;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--darkblue);
+    transition: all .5s ease;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.sidebar img {
+    width: 9.5em;
+}
+
+.sideLogo {
+    margin-top: 5%;
+    margin-left: 20%;
+    padding: 5%;
+}
+
+.sidebar ul button{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    font-size: 20px;
+    padding-left: 20px;
+    transition: .4s;
+    border: none;
+}
+
+.unselectedClientBtn {
+    background-color: #060241FF;
+}
+
+.clientFunctionsBtn h3 {
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.functionsList li:hover button{
+    padding-left: 50px;
+}
+
+.selectedClientBtn {
+    background-color: var(--blue);
+    border-radius: 1em;
+}
+
+.selectedClientBtn h3 {
+    color: var(--turquoise);
+
+}
+
+.clientFunctionsBtn img {
+    top:0;
+    bottom:0;
+    padding: 5%;
+    height: 5vh;
+    width: 5vh;
+    margin-right: 8px;
+}
+
+.clientFunctions{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+    margin-left: 30vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+.ClientFunction h2 {
+    color: var(--white);
+}
+
+.viewLessonsEmpty {
+    color: var(--white);
+}
+
+#personalBookingsTable {
+    margin-left: 20vh;
+    width: 70%;
+}
+
+#personalBookingsTable tr td button img{
+    width: 20px;
+    display: flex;
+}
+
+.footerSectionClient {
+    margin-top: 30vh;
+    margin-left: 30vh;
+}
+
+@media(max-width: 900px) {
+    .choice {
+        display: block;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .clientFunctionsBtn h3 {
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        align-items: center;
+        left: 0;
+        width: 10vh;
+        height: 100%;
+        background: var(--darkblue);
+        transition: all .5s ease;
+        margin-top: 0;
+        z-index: 1;
+    }
+
+    .sidebar .img {
+        width: 3.5em;
+    }
+
+    .functionsList li:hover button {
+        padding-left: 20%;
+    }
+
+    .hero-btn {width: 70%}
+
+    #personalBookingsTable {
+        margin-left: 6vh;
+        width: 70%;
+    }
+
+    .dropDown .hero-btn {
+        width: 100%;
+    }
+    .clientFunctions {
+        margin-left: 5vh;
+    }
+}

@@ -1,0 +1,451 @@
+
+.header.guest{
+    min-height: 100vh;
+}
+
+.textbox {
+    color: var(--white);
+    width: 90%;
+    position: absolute;
+    text-align: left;
+    padding-left: 10vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.textbox h1 {
+    font-size: 4em;
+}
+
+.textbox p {
+    margin: 3vh 0 8vh;
+    font-size: 1.5em;
+}
+
+.hero-btn {
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    border: 0.1em solid var(--white);
+    border-radius: 0.5em;
+    padding:2vh 4vh;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.hero-btn:hover {
+    border-color: var(--turquoise);
+    background: var(--turquoise);
+    transition: 1s;
+}
+
+.campus {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 8vh;
+}
+
+
+.campus h2 {
+    color: var(--white);
+}
+
+
+.campus-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8vh;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    border-radius: 1em;
+    margin-bottom: 8vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.layer:hover {
+    background: rgba(139, 216, 189, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.625em;
+    bottom: 0;
+    left: 50%;
+    color: #fff;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+#viewCourses {
+    margin: 50px;
+}
+
+.coursesTable {
+    width: 50%;
+    table-layout: fixed;
+    margin-left: 25vh;
+}
+#coursesTableHeader {
+    background-color: rgba(255,255,255,0.3);
+}
+#coursesTableBody {
+    overflow-x: auto;
+    margin-top: 0;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.coursesTableHeader tr th {
+    text-align: center;
+    padding: 20px 15px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.coursesTableBody tr td {
+    padding: 15px;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--white);
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+
+
+.teachers {
+    padding: 10vh 0vh;
+    background-color: white;
+    text-align: center;
+}
+
+.teachers h2 {
+    color: var(--blue);
+}
+
+.teachers p {
+    margin: 1vh 0 3vh;
+    font-size: 1.25em;
+    color: var(--blue);
+}
+
+.container {
+    display: flex;
+    margin: 10vh 20vh;
+    justify-content: space-between;
+    perspective: 100em;
+}
+.container .card {
+    flex-basis: 18%;
+    border-radius: 1.5em;
+    cursor: pointer;
+    padding: 0.5vh;
+    margin: 0vh 2vh;
+    text-align: center;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.container .card:hover {
+    -webkit-transform: rotateY(0.5turn);
+    transform: rotateY(0.5turn);
+}
+.container .card .item {
+    object-fit: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.container .card .item img {
+    border-radius: 1.5em;
+    height: 30vh;
+    width: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.item{
+    position: absolute;
+    color: var(--blue);
+}
+
+.front-side-low {
+    padding: 10vh;
+}
+
+.front-side-low h4 {
+    text-align: left;
+    font-weight: normal;
+    color: var(--blue);
+    font-size: 2.5em;
+}
+
+.front-side-low span {
+    font-weight: bold;
+}
+
+.back-side {
+    border-radius: 1.5em;
+    padding: 4vh;
+    height: 24vh;
+    color: var(--blue);
+    background-color: var(--turquoise);
+    -webkit-transform: rotateY(0.5turn);
+    transform: rotateY(0.5turn);
+    text-align: left;
+}
+
+.container h4 {
+    padding: 2vh;
+    font-size: 1.25em;
+}
+.back-side li {
+    padding-top: 2vh;
+}
+.viewTeachers {
+    margin-top: 35vh;
+    color: var(--blue);
+    border: 0.1em solid var(--blue);
+}
+
+.viewTeachers:hover {
+    border-color: var(--white);
+    background: var(--blue);
+    color: var(--white);
+    transition: 1s;
+}
+
+.reviews {
+    width: 80%;
+    text-align: center;
+    margin: 10vh auto;
+}
+
+.reviews h2 {
+    color: var(--white);
+
+}
+
+.reviews p {
+    color: var(--white);
+}
+
+.reviews-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+.reviews-col {
+    flex-basis: 44%;
+    border-radius: 1.6em;
+    text-align: left;
+    background: #fff3f3;
+    cursor: pointer;
+    padding: 3vh;
+}
+
+.reviews-col h3 {
+    font-style: italic;
+    color: var(--blue);
+    position: center;
+    padding-right: 0vh;
+    margin: 0vh;
+    margin-top: 2.5vh;
+
+}
+
+.reviews-col img {
+    height: 3em;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.closeQuotes {
+    padding-left: 80%;
+    justify-content: end;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.reviews-col p {
+    color: var(--blue);
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 2em;
+    padding: 0vh 6vh;
+}
+
+.reviews-col .fa {
+    color: var(--turquoise);
+    padding-top: 2vh;
+    position: center;
+    margin-top: 2.5vh;
+}
+
+.reviews-col:hover {
+    box-shadow: 0 0 10vh 0vh rgba(139, 216, 189, 0.5);
+}
+
+.reviews-source-rating {
+    margin-top: 2vh;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 2vh 5vh 5vh 5vh;
+}
+
+.reviews-source-rating h3 {
+    width: 40vh;
+}
+
+.review-comment {
+    height: 25vh;
+}
+
+.EoS {
+    background: linear-gradient(180deg, var(--blue) 0vh,rgba(2,0,36,1) 100vh);
+}
+
+.cta {
+    position: center;
+    margin: 3vh auto;
+    width: 160vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url(../images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.5em;
+    text-align: center;
+    padding: 10vh 0;
+}
+
+.cta h2 {
+    color: #fff;
+    margin-bottom: 1vh;
+}
+
+.cta p {
+    color: #fff;
+    margin-bottom: 5vh;
+}
+
+
+
+@media(max-width: 900px) {
+    body {
+        width: 50vh;
+        justify-content: center;
+        align-items: center;
+        position: center;
+        margin: 0;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    nav {
+        padding: 1vh 1vh 1vh 3vh;
+        width: 50vh;
+    }
+
+    .nav-links ul li a {
+        display: none;
+    }
+
+    .nav-links ul li button {
+        padding-left: 3vh;
+    }
+
+    .header {
+        width: 100%;
+        height: 100%;
+    }
+
+    .campus-row {
+        display: none;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .textbox h1 {
+        font-size: 36px;
+        position: center;
+        margin-bottom: 5vh;
+    }
+
+    .textbox button {
+        margin-top: 5vh;
+    }
+
+    .textbox p {
+        display: none;
+    }
+
+    #courses h2 {
+        margin-bottom: 5vh;
+    }
+
+    .coursesTable {
+        margin-left: 5vh;
+        width: 100%;
+    }
+
+    .viewTeachers {
+        margin-top: 3vh;
+    }
+    .cta {
+        width: 80%;
+    }
+
+    .reviews {
+        display: none;
+    }
+
+    .containerAvailableLessons {
+        margin-top: 5vh;
+    }
+
+    /*footer {
+        display: none;
+    }
+    */
+}
