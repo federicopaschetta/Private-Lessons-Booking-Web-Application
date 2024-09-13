@@ -1,4 +1,4 @@
-# Private Lessons Booking Android Application
+# Private Lessons Booking Fullstack Application
 
 This project attempts to design and create both backend and frontend to handle a private lessons booking web application. It includes HTML, CSS and JavaScript (with Vue framework) frontend code and Java Servlet backend.
 
